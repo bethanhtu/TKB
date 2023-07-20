@@ -1,7 +1,7 @@
 
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-black text-white">
-  <!-- Section: Social media -->
+  <!-- Liên hệ  -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
     <div class="me-5 d-none d-lg-block">
@@ -11,22 +11,19 @@
 
     <!-- Right -->
     <div>
-      <a href="" class="me-4 text-reset p-4 text-decoration-none">
+      <a href="https://www.facebook.com/cooy.tu" class="me-4 text-reset p-4">
         <i class="fab fa-facebook"></i>
       </a>
-      <a href="" class="me-4 text-reset p-4 text-decoration-none ">
+      <a href="https://twitter.com/anhtus2021" class="me-4 text-reset p-4 ">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="" class="me-4 text-reset p-4 text-decoration-none">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset p-4 text-decoration-none">
+      <a href="https://www.instagram.com/" class="me-4 text-reset p-4">
         <i class="fab fa-instagram"></i>
       </a>
     </div>
     <!-- Right -->
   </section>
-  <!-- Section: Social media -->
+  <!-- Liên hệ  -->
 
   <!-- Section: Links  -->
   <section class="">
@@ -79,14 +76,10 @@
         <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Tài khoản</h6>
-          <p><i class="fas fa-home me-3"></i> Hanoi</p>
-          <p>
-            <i class="fas fa-envelope me-3"></i>
-            php@
-          </p>
-          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          <h6 class="text-uppercase fw-bold mb-4">Liên hệ</h6>
+          <!-- <p><i class="fas fa-home me-3"></i> Cao bằng</p> -->
+          <p><i class="fas fa-envelope me-3"></i><a  class="pl-2 text-white" href="https://mail.google.com/mail/u/0/#inbox">BeTu</a></p>
+          <p><i class="fas fa-phone me-3"></i> +84  854502397</p>
         </div>
         <!-- Grid column -->
       </div>
@@ -98,7 +91,7 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     Bản quyền thuộc về: 
-    <a class="text-reset fw-bold" href="#">TKBMOVIES</a>
+    <a class="text-reset fw-bold facebook text-white" href="https://www.facebook.com/cooy.tu/">BeTu</a>
   </div>
   <!-- Copyright -->
 </footer>
@@ -106,6 +99,13 @@
 
 <style>
 body {
-  background-color: #000
+  background-color: #1A202C;
+  
+}
+.facebook {
+  color: blue;
+}
+footer {
+  margin:0 auto;
 }
 </style>

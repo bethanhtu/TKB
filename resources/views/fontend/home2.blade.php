@@ -1,6 +1,9 @@
 @extends ('layouts.default')
 @extends ('layouts.news')
 @section('contents')
+// Tạo mã JavaScript để hiển thị thông báo
+
+        $script = "<script type='text/javascript'>alert('Chức năng đang nhập nhật');</script>";
 
 <div class="container">
         <div class="all">

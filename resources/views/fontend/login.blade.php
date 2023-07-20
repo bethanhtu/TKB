@@ -23,19 +23,33 @@
              <li class="text-danger"> {{ session('status') }}</li>
          </ul>
      @endif
+
+     @if (session('nhaplai'))
+         <ul>
+             <li class="text-danger"> {{ session('nhaplai') }}</li>
+         </ul>
+     @endif
      
 
+     @if (isset($message))
+               <div class="alert alert-success">
+               {{ $message }}
+               </div>
+      @endif
 
-<section class="vh-100">
-  <div class="container-fluid h-custom">
+
+
+  <div class="container-fluid">
   <a class="float-right m-3 font-weight-bold cancel" href="/">X</a>
   
+  <!-- Login -->
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <!-- logo -->
       <h1 class="fw-normal mb-0 me-5 font-weight-bold p-3 logobrand">TKBMOVIES</h1>
       
       <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-        
+        <!-- Đăng nhập khác -->
                   <p class="lead fw-normal mb-0 me-3">Đăng nhập bằng</p>
                      <button type="button" class="btn btn-primary btn-floating mx-1">
                      <i class="fab fa-facebook-f"></i>
@@ -51,39 +65,48 @@
                   </div>
 
                   <div class="divider d-flex align-items-center my-4">
-                     <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                     <p class="text-center fw-bold mx-3 mb-0">Hoặc</p>
                   </div>
-        <div class="form-outline mb-0">
-        <form action="{{ route('getLogin') }}" method="post">
-         {{ csrf_field() }}
-         
-                <div class="form-outline mb-0">
-                    {!! Form::label('email', 'Email', array('class' => 'col-sm-3 control-label')) !!}
-                    <div class="col-sm-100">
-                      {!! Form::email('email', '', array('class' => 'form-control form-control-lg')) !!}
-                    </div>
-                </div>
+        <!-- Đăng nhập khác -->
+        <div class="form-outline">
+          <!-- form -->
+          <form method="POST" action="{{ route('login') }}">
+          @csrf
+                  <div class="form-outline">
+                      {!! Form::label('email', 'Email', array('class' => 'col-sm-3 control-label')) !!}
+                      <div class="col-sm-100">
+                        {!! Form::email('email', '', array('class' => 'form-control form-control-lg')) !!}
+                      </div>
+                  </div>
 
-                <div class="form-outline mb-0">
-                    {!! Form::label('password', 'Password', array('class' => 'col-sm-3 control-label')) !!}
-                    <div class="col-sm-100">
-                      {!! Form::password('password', array('class' => 'form-control form-control-lg')) !!}
-                    </div>
-                </div>
+                  <div class="form-outline">
+                      {!! Form::label('password', 'Password', array('class' => 'col-sm-3 control-label')) !!}
+                      <div class="col-sm-100">
+                        {!! Form::password('password', array('class' => 'form-control form-control-lg')) !!}
+                      </div>
+                  </div>
 
-                <div class="text-center text-lg-start mt-1 pt-2">
-                    <button class="btn btn-primary btn-lg">
-                      {!! Form::submit('Đăng nhập', array('class' => 'btn btn-primary btn-lg')) !!}
-                    </button>
-                    <p class="small fw-bold mt-0 pt-1 mb-0">Bạn chưa có tài khoản <a href="/register"
-                          class="link-danger">Đăng ký</a></p>
-                </div>
+                  <div class="form-outline">
+                      {!! Form::label('nhaplai', 'Password', array('class' => 'col-sm-3 control-label')) !!}
+                      <div class="col-sm-100">
+                        {!! Form::password('nhaplai', array('class' => 'form-control form-control-lg')) !!}
+                      </div>
+                  </div>
+                  <div class="text-center text-lg-start mt-1 pt-2">
+                      <button class="btn btn-primary btn-lg">
+                        {!! Form::submit('Đăng nhập', array('class' => 'btn btn-primary btn-lg')) !!}
+                      </button>
+                      <p class="small fw-bold mt-0 pt-1">Bạn chưa có tài khoản <a href="/register"
+                            class="link-danger">Đăng ký</a></p>
+                  </div>
           </form>
+        <!-- form -->
         </div>
       </div>
     </div>
+     <!-- Login -->
   </div>
-</section>
+
 <style>
   .cancel {
     font-size: 30px;

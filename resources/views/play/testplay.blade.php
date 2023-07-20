@@ -1,43 +1,47 @@
 @extends('layouts.default')
-
 @section('contents')
-    <div class="movie-info text-white">
-        <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
-            
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ABuY4KUUVcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="container flex-center">
+<div class="play">
+    <!-- play -->
+    <div class="movie-info text-white"> 
+        <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row flex-direction: center">
 
+        <img width="700px" height="300px" src="" title="Play video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></ì>
+            
             
             <div class="md:ml-24">
-                <h2 class="text-4xl mt-4 md:mt-0 font-semibold">The idol</h2>
+                <h2 class="text-4xl mt-4 md:mt-0 font-semibold">Avatar 2</h2>
                 <div class="flex flex-wrap items-center text-white text-sm">
                     
-                    <span class="ml-1">vote</span>
+                    <span class="ml-1">12.322 views</span>
                     <span class="mx-2">|</span>
-                    <span>days</span>
+                    <span>6/12/2022</span>
                     <span class="mx-2">|</span>
-                    <span>thể loại</span>
+                    <span>phim chiếu rạp</span>
                 </div>
 
-                <p class="text-gray-300 mt-8">
-                    Mô tả
+                <p class="text-gray-300 mt-5">
+                Avatar: Dòng Chảy Của Nước – Avatar: The Way of Water lấy bối cảnh 10 năm sau những sự kiện xảy ra ở phần đầu tiên. Phim kể câu chuyện về gia đình mới của Jake Sully (Sam Worthington thủ vai) cùng những rắc rối theo sau và bi kịch họ phải chịu đựng khi phe loài người xâm lược hành tinh Pandora.
                 </p>
 
-                <div class="mt-12">
-                    <h4 class="text-white font-semibold">Featured Crew</h4>
-                    <div class="flex mt-4">
-                        crew
-                    </div>
+                <div class="mt-2">
+                    <h4 class="text-white font-semibold">Thông tin chi tiết</h4>
                 </div>
 
                 <div x-data="{ isOpen: false }">
                    
-                        <div class="mt-12 description ">
+                        <div class="mt-0 description ">
                             <button
-                                @click="isOpen = true"
-                                class="flex inline-flex items-center bg-orange-500 text-gray-900 rounded font-semibold px-5 py-4 hover:bg-orange-600 transition ease-in-out duration-150"
-                            >
-                                
-                                <span class="ml-2">Play Trailer</span>
+                                class="flex inline-flex items-center px-2 py-4">
+                                <span class="p-4">Thông tin</span>
+                            </button>
+                            <button
+                                class="flex inline-flex items-center px-2 py-4">
+                                <span class="p-4">Diễn viên</span>
+                            </button>
+                            <button
+                                class="flex inline-flex items-center px-2 py-4">
+                                <span class="p-4">Trailer</span>
                             </button>
                         </div>
 
@@ -64,18 +68,28 @@
                                 </div>
                             </div>
                         </template>
-                    
-
-
                 </div>
-
             </div>
         </div>
     </div>
+    <div class="list float-right">
+        
+    </div>
+</div>
+
+
     <style>
         .description button,.description span{
             background-color: orange;
         }
-        
+        .play {
+            height: 100%;
+            width: 100%;
+        }
+        .list {
+            height: 100%;
+            width: %;
+            background-color: red;
+        }
     </style>
 @endsection
